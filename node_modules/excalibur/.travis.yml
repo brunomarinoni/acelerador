@@ -1,0 +1,19 @@
+sudo: false
+install: true
+language: node_js
+node_js:
+- '4'
+
+before_script:
+    # Set up NPM auth token
+    - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+
+    # Get current package version
+    - PACKAGE_VERSION=$(node -p -e "require('./package.json').version")
+
+    # Check whether NPM already has this version published
+    - NPM_EXISTS=$(npm view excalibur@$PACKAGE_VERSION)
+
+script:
+    # Publish new prerelease tag if version doesn't exist AND it has alpha in the name
+    - if [ "$NPM_EXISTS" = "" ] && [[ $PACKAGE_VERSION == *"-alpha"* ]]; then npm publish --tag next; fi

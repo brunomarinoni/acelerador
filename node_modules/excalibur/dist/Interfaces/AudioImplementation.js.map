@@ -1,0 +1,1 @@
+{"version":3,"file":"AudioImplementation.js","sourceRoot":"","sources":["../../../src/engine/Interfaces/AudioImplementation.ts"],"names":[],"mappings":"AASA;IAAA;IASA,CAAC;IARe,eAAI,GAA0B;QAC1C,GAAG,EAAE,EAAE;QACP,IAAI,EAAE,MAAM;QACZ,IAAI,EAAE,MAAM;QACZ,IAAI,EAAE,MAAM;QACZ,QAAQ,EAAE,UAAU;QACpB,WAAW,EAAE,aAAa;KAC3B,CAAC;IACJ,iBAAC;CAAA,AATD,IASC;SATY,UAAU"}
